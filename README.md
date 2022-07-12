@@ -11,7 +11,7 @@ To make it easier to keep any generated docs up to date, you may want to add a j
 For example:
 ```
 curl http://myservice/metrics > /tmp/metrics.pef
-go run ./prometheus_format.go -f /tmp/metrics.pef > generated_metrics.adoc
+go run ./prometheus_format.go -f /tmp/metrics.pef -c format_tables.csv > generated_metrics.adoc
 git diff --exit-code
 ```
 
