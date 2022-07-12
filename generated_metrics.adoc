@@ -1,0 +1,58 @@
+
+////
+THIS CONTENT IS GENERATED FROM THE FOLLOWING FILES:
+- Prometheus metrics file path sample_metrics.pef
+- Tables config file path format_tables.csv
+Each row in the tables config file results in a new metrics table
+where the 1st column is the metrics name prefix to match on (e.g. go_)
+and the 2nd column is the table title (e.g. "Go Runtime Metrics")
+////
+.client-go REST API Call metrics
+|===
+|Name |Help |Type |Labels
+| `rest_client_request_latency_seconds` | Request latency in seconds. Broken down by verb.| HISTOGRAM| `verb` 
+| `rest_client_requests_total` | Number of HTTP requests, partitioned by status code, method, and host.| COUNTER| `code` `host` `method` 
+|===
+.Go Runtime metrics
+|===
+|Name |Help |Type |Labels
+| `go_gc_duration_seconds` | A summary of the pause duration of garbage collection cycles.| SUMMARY| 
+| `go_goroutines` | Number of goroutines that currently exist.| GAUGE| 
+| `go_info` | Information about the Go environment.| GAUGE| `version` 
+| `go_memstats_alloc_bytes` | Number of bytes allocated and still in use.| GAUGE| 
+| `go_memstats_alloc_bytes_total` | Total number of bytes allocated, even if freed.| COUNTER| 
+| `go_memstats_buck_hash_sys_bytes` | Number of bytes used by the profiling bucket hash table.| GAUGE| 
+| `go_memstats_frees_total` | Total number of frees.| COUNTER| 
+| `go_memstats_gc_cpu_fraction` | The fraction of this program's available CPU time used by the GC since the program started.| GAUGE| 
+| `go_memstats_gc_sys_bytes` | Number of bytes used for garbage collection system metadata.| GAUGE| 
+| `go_memstats_heap_alloc_bytes` | Number of heap bytes allocated and still in use.| GAUGE| 
+| `go_memstats_heap_idle_bytes` | Number of heap bytes waiting to be used.| GAUGE| 
+| `go_memstats_heap_inuse_bytes` | Number of heap bytes that are in use.| GAUGE| 
+| `go_memstats_heap_objects` | Number of allocated objects.| GAUGE| 
+| `go_memstats_heap_released_bytes` | Number of heap bytes released to OS.| GAUGE| 
+| `go_memstats_heap_sys_bytes` | Number of heap bytes obtained from system.| GAUGE| 
+| `go_memstats_last_gc_time_seconds` | Number of seconds since 1970 of last garbage collection.| GAUGE| 
+| `go_memstats_lookups_total` | Total number of pointer lookups.| COUNTER| 
+| `go_memstats_mallocs_total` | Total number of mallocs.| COUNTER| 
+| `go_memstats_mcache_inuse_bytes` | Number of bytes in use by mcache structures.| GAUGE| 
+| `go_memstats_mcache_sys_bytes` | Number of bytes used for mcache structures obtained from system.| GAUGE| 
+| `go_memstats_mspan_inuse_bytes` | Number of bytes in use by mspan structures.| GAUGE| 
+| `go_memstats_mspan_sys_bytes` | Number of bytes used for mspan structures obtained from system.| GAUGE| 
+| `go_memstats_next_gc_bytes` | Number of heap bytes when next garbage collection will take place.| GAUGE| 
+| `go_memstats_other_sys_bytes` | Number of bytes used for other system allocations.| GAUGE| 
+| `go_memstats_stack_inuse_bytes` | Number of bytes in use by the stack allocator.| GAUGE| 
+| `go_memstats_stack_sys_bytes` | Number of bytes obtained from system for stack allocator.| GAUGE| 
+| `go_memstats_sys_bytes` | Number of bytes obtained from system.| GAUGE| 
+| `go_threads` | Number of OS threads created.| GAUGE| 
+|===
+.Process metrics
+|===
+|Name |Help |Type |Labels
+| `process_cpu_seconds_total` | Total user and system CPU time spent in seconds.| COUNTER| 
+| `process_max_fds` | Maximum number of open file descriptors.| GAUGE| 
+| `process_open_fds` | Number of open file descriptors.| GAUGE| 
+| `process_resident_memory_bytes` | Resident memory size in bytes.| GAUGE| 
+| `process_start_time_seconds` | Start time of the process since unix epoch in seconds.| GAUGE| 
+| `process_virtual_memory_bytes` | Virtual memory size in bytes.| GAUGE| 
+| `process_virtual_memory_max_bytes` | Maximum amount of virtual memory available in bytes.| GAUGE| 
+|===
